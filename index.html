@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hefestus CT - Centro de Treinamento</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: orange;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: gold;
+            font-size: 48px;
+            margin: 0;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            color: black;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: orange;
+            font-size: 28px;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .product-list {
+            list-style: none;
+            padding: 0;
+        }
+        .product-list li {
+            background-color: #444;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .product-list li:hover {
+            background-color: orange;
+            color: black;
+        }
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .tabela th, .tabela td {
+            padding: 10px;
+            border: 1px solid #666;
+            text-align: center;
+        }
+        .boxe {
+            background-color: #ffcc00; /* Amarelo */
+        }
+        .jiu-jitsu {
+            background-color: #ff6600; /* Laranja */
+        }
+        .muay-thai {
+            background-color: #cc0000; /* Vermelho */
+        }
+        .crossfit {
+            background-color: #009900; /* Verde */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            border-top: 5px solid orange;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .plan {
+            background-color: #444;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px; /* Tamanho maior para as categorias */
+            transition: background-color 0.3s;
+        }
+        .plan:hover {
+            background-color: #ffcc00; /* Amarelo */
+        }
+        .jiu-jitsu:hover {
+            background-color: #ff6600; /* Laranja */
+        }
+        .muay-thai:hover {
+            background-color: #cc0000; /* Vermelho */
+        }
+        .crossfit:hover {
+            background-color: #009900; /* Verde */
+        }
+        .sub-plan {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px; /* Tamanho normal para as subcategorias */
+        }
+        .sub-plan.boxe {
+            background-color: #ffcc00; /* Amarelo */
+        }
+        .sub-plan.jiu-jitsu {
+            background-color: #ff6600; /* Laranja */
+        }
+        .sub-plan.muay-thai {
+            background-color: #cc0000; /* Vermelho */
+        }
+        .sub-plan.crossfit {
+            background-color: #009900; /* Verde */
+        }
+        .sub-plan:hover {
+            opacity: 0.8; /* Efeito de hover para subcategorias */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function togglePlanDetails(id) {
+            const details = document.getElementById(id);
+            details.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Hefestus CT</h1>
+    <nav>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#horarios">Horários dos Treinos</a>
+        <a href="#loja">Loja Online</a>
+        <a href="#planos">Planos</a>
+    </nav>
+</header>
+
+<section id="sobre" class="content">
+    <h2>Sobre Nós</h2>
+    <p>Bem-vindo ao <strong>Hefestus CT</strong>, seu centro de treinamento especializado em artes marciais e bem-estar! Nossa academia é um verdadeiro templo para os amantes do esporte, oferecendo um ambiente acolhedor e motivador para todos os níveis de praticantes.</p>
+    <p>Contamos com uma infraestrutura de primeira linha, incluindo uma ampla área de treino que combina as melhores práticas do crossfit com espaços dedicados às artes marciais. Aqui, você pode praticar boxe, jiu-jitsu, muay thai e muito mais, com equipamentos modernos e seguros.</p>
+    <p>Além disso, oferecemos a comodidade do empréstimo de equipamentos, para que você possa treinar sem preocupações. Nossa loja interna é um verdadeiro paraíso para os atletas, disponibilizando produtos de qualidade para potencializar seu desempenho, como whey protein, creatina, pré-treinos e equipamentos essenciais para suas atividades.</p>
+    </p>Contamos com uma loja física recheada de produtos para maximizar seus treinos.
+    </p>A loja online serve exclusivamente como mostruário de produtos que temos e vendemos apenas na loja física.
+</section>
+
+<section id="horarios" class="content">
+    <h2>Horários dos Treinos</h2>
+    <h3>Boxe</h3>
+    <table class="tabela boxe">
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Segunda</td>
+            <td>18:00 - 19:30</td>
+        </tr>
+        <tr>
+            <td>Quarta</td>
+            <td>18:00 - 19:30</td>
+        </tr>
+        <tr>
+            <td>Sexta</td>
+            <td>18:00 - 19:30</td>
+        </tr>
+    </table>
+
+    <h3>Jiu-Jitsu</h3>
+    <table class="tabela jiu-jitsu">
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Terça</td>
+            <td>19:00 - 20:30</td>
+        </tr>
+        <tr>
+            <td>Quinta</td>
+            <td>19:00 - 20:30</td>
+        </tr>
+        <tr>
+            <td>Sábado</td>
+            <td>10:00 - 11:30</td>
+        </tr>
+    </table>
+
+    <h3>Muay Thai</h3>
+    <table class="tabela muay-thai">
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Segunda</td>
+            <td>19:30 - 21:00</td>
+        </tr>
+        <tr>
+            <td>Quarta</td>
+            <td>19:30 - 21:00</td>
+        </tr>
+        <tr>
+            <td>Domingo</td>
+            <td>09:00 - 10:30</td>
+        </tr>
+    </table>
+
+    <h3>Crossfit</h3>
+    <table class="tabela crossfit">
+        <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Terça</td>
+            <td>07:00 - 08:00</td>
+        </tr>
+        <tr>
+            <td>Quinta</td>
+            <td>07:00 - 08:00</td>
+        </tr>
+        <tr>
+            <td>Sábado</td>
+            <td>11:30 - 12:30</td>
+        </tr>
+    </table>
+</section>
+
+<section id="loja" class="content">
+    <h2>Loja Online</h2>
+    <ul class="product-list">
+        <li>Whey-Protein (1kg) <span>R$ 90,00</span></li>
+        <li>Creatina Monohidratada (300g) <span>R$ 67,90</span></li>
+        <li>Pré-Treino Absolut (350g) <span>R$ 89,90</span></li>
+        <li>Par de Luvas Premium <span>R$ 250,55</span></li>
+        <li>Par de Caneleiras Premium <span>R$ 159,65</span></li>
+        <li>Protetor Bocal Completo <span>R$ 50,00</span></li>
+        <li>Protetor Bocal <span>R$ 25,00</span></li>
+        <li>Bandagens 5 metros <span>R$ 55,00</span></li>
+        <li>Bandagens 3 metros <span>R$ 40,00</span></li>
+        <li>Camisa do CT P <span>R$ 35,00</span></li>
+        <li>Camisa do CT M <span>R$ 40,00</span></li>
+        <li>Camisa do CT G <span>R$ 45,00</span></li>
+        <li>Camisa do CT GG <span>R$ 50,00</span></li>
+        <li>Shorts Muay Thai <span>R$ 46,50</span></li>
+        <li>Cinturão <span>R$ 99,90</span></li>
+        <li>Strepes <span>R$ 25,50</span></li>
+    </ul>
+</section>
+
+<section id="planos" class="content">
+    <h2>Planos</h2>
+
+    <div class="plan boxe" onclick="togglePlanDetails('boxe-plans')">
+        Boxe
+    </div>
+    <div id="boxe-plans" class="hidden">
+        <div class="sub-plan boxe" onclick="togglePlanDetails('boxe-iniciante')">
+            Boxe Iniciante
+        </div>
+        <div id="boxe-iniciante" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 50,00</p>
+            <p>Pagando o plano iniciante, você ficará em uma turma própria de pessoas que estão começando na modalidade e terá instrutores de prontidão para tirar suas dúvidas.</p>
+        </div>
+        
+        <div class="sub-plan boxe" onclick="togglePlanDetails('boxe-intermediario')">
+            Boxe Intermediário
+        </div>
+        <div id="boxe-intermediario" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 65,00</p>
+            <p>Nessa categoria, você terá aulas com sparring (corpo a corpo) e exercícios físicos adicionais.</p>
+        </div>
+
+        <div class="sub-plan boxe" onclick="togglePlanDetails('boxe-profissional')">
+            Boxe Profissional
+        </div>
+        <div id="boxe-profissional" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 150,00</p>
+            <p>Nessa categoria, você terá uma turma com pessoas de quase a mesma experiência, com sparring e treinos de crossfit junto das técnicas.</p>
+        </div>
+    </div>
+
+    <div class="plan jiu-jitsu" onclick="togglePlanDetails('jiu-jitsu-plans')">
+        Jiu-Jitsu
+    </div>
+    <div id="jiu-jitsu-plans" class="hidden">
+        <div class="sub-plan jiu-jitsu" onclick="togglePlanDetails('jiu-jitsu-iniciante')">
+            Jiu-Jitsu Iniciante
+        </div>
+        <div id="jiu-jitsu-iniciante" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 50,00</p>
+            <p>Com o plano iniciante, você fará parte de uma turma focada em iniciantes, com instrutores dedicados a esclarecer suas dúvidas.</p>
+        </div>
+
+        <div class="sub-plan jiu-jitsu" onclick="togglePlanDetails('jiu-jitsu-intermediario')">
+            Jiu-Jitsu Intermediário
+        </div>
+        <div id="jiu-jitsu-intermediario" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 65,00</p>
+            <p>Nessa categoria, você terá sparring e uma variedade de exercícios físicos para aprimorar suas habilidades.</p>
+        </div>
+
+        <div class="sub-plan jiu-jitsu" onclick="togglePlanDetails('jiu-jitsu-profissional')">
+            Jiu-Jitsu Profissional
+        </div>
+        <div id="jiu-jitsu-profissional" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 150,00</p>
+            <p>Terá acesso a treinos com alunos de nível similar e sessões de sparring avançadas.</p>
+        </div>
+    </div>
+
+    <div class="plan muay-thai" onclick="togglePlanDetails('muay-thai-plans')">
+        Muay Thai
+    </div>
+    <div id="muay-thai-plans" class="hidden">
+        <div class="sub-plan muay-thai" onclick="togglePlanDetails('muay-thai-iniciante')">
+            Muay Thai Iniciante
+        </div>
+        <div id="muay-thai-iniciante" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 50,00</p>
+            <p>Você começará em uma turma de iniciantes com acompanhamento de instrutores qualificados.</p>
+        </div>
+
+        <div class="sub-plan muay-thai" onclick="togglePlanDetails('muay-thai-intermediario')">
+            Muay Thai Intermediário
+        </div>
+        <div id="muay-thai-intermediario" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 65,00</p>
+            <p>Nessa categoria, você terá aulas com sparring e um foco em exercícios físicos adicionais.</p>
+        </div>
+
+        <div class="sub-plan muay-thai" onclick="togglePlanDetails('muay-thai-profissional')">
+            Muay Thai Profissional
+        </div>
+        <div id="muay-thai-profissional" class="hidden">
+            <p><strong>Valor mensal:</strong> R$ 150,00</p>
+            <p>Treinos em grupo com participantes de experiência semelhante, incluindo sparring e treinos complementares.</p>
+        </div>
+    </div>
+
+    <div class="plan crossfit" onclick="togglePlanDetails('crossfit-plans')">
+        Crossfit
+    </div>
+    <div id="crossfit-plans" class="hidden">
+        <p><strong>Planos de Crossfit:</strong></p>
+        <p>Experimente o Crossfit, um treino que combina alta intensidade e movimentos funcionais. Melhore sua força, resistência e agilidade com treinos desafiadores e motivadores.</p>
+        <p><strong>Mensal:</strong> R$ 80,00</p>
+        <p><strong>Semestral:</strong> R$ 69,90</p>
+        <p><strong>Trimestral:</strong> R$ 55,60</p>
+        <p><strong>Anual:</strong> R$ 39,90</p>
+    </div>
+</section>
+
+<section class="content">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:HefestusCt@gmail.com" style="color: orange;">HefestusCt@gmail.com</a></p>
+    <p>Telefone: <strong>(14) 98164-4059</strong></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Hefestus CT - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html> 
